@@ -13,23 +13,23 @@ import java.util.Iterator;
 public class MakeTreeMap {
 	//TreeMap<Key,Value>
 	Map<Fruit, Integer> m1 = new TreeMap<Fruit, Integer>();
-	
-	//자료 추가		
+
+	//자료 추가
 	void inputMap(Fruit f, Integer i){
 		m1.put(f,i); //put(key,value) : 해시 테이블에 데이터 추가
-		}	
+		}
 	//Iterator을 통한 전체 자료 순회, 출력
-	void printMapByIter() {		
-		Set<Fruit> setFruit = m1.keySet();        //     setCode : m1의 key들의 set. key값은 중복될 수 없으므로 반환형은 Set이다.
-		Collection<Integer> setValue = m1.values();      //setCountry : m1의 value들의 collection. value값은 중복가능하므로 반환형은 Collection이다.
-		Iterator<Fruit> iterator = setFruit.iterator();		 
+	void printMapByIter() {
+		Set<Fruit> setFruit = m1.keySet();        //     setFruit : m1의 key들의 set. key값은 중복될 수 없으므로 반환형은 Set이다.
+		Collection<Integer> setValue = m1.values();      //setValue : m1의 value들의 collection. value값은 중복가능하므로 반환형은 Collection이다.
+		Iterator<Fruit> iterator = setFruit.iterator();
 		while (iterator.hasNext()) {                        //iterator가 next값을 가지고 있는가?
 			Fruit code = iterator.next();
 		    Integer value = m1.get(code);	//m1.get(key) : 해당 key값에 해당하는 value값을 읽는다.
-		    System.out.printf("%s:%d\n",code.name,value);	    
-		}	 
-	}	
-	
+		    System.out.printf("%s:%d\n",code.name,value);
+		}
+	}
+
 	public static void main(String[] args) {
 		MakeTreeMap map = new MakeTreeMap();
 		Fruit f1 = new Fruit("Strawberry","Korea");
