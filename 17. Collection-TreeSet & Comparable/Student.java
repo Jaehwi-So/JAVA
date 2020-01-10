@@ -1,4 +1,4 @@
-package hashtree;
+package treeset;
 
 public class Student implements Comparable<Student> {
 
