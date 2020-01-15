@@ -3,23 +3,23 @@ package fileio3;
 import java.io.FileWriter;
 import java.io.IOException;
 
-//Writer : ¹®ÀÚ ´ÜÀ§·Î ÀĞ´Â ½ºÆ®¸² Áß ÃÖ»óÀ§ ½ºÆ®¸²
+//Writer : ë¬¸ì ë‹¨ìœ„ë¡œ ì½ëŠ” ìŠ¤íŠ¸ë¦¼ ì¤‘ ìµœìƒìœ„ ìŠ¤íŠ¸ë¦¼
 /*
-FileWriter : ÆÄÀÏ¿¡¼­ ¹®ÀÚ ´ÜÀ§·Î ¾²´Â ½ºÆ®¸² Å¬·¡½º
-InputStreamWriter : ¹ÙÀÌÆ® ´ÜÀ§·Î ¾´ ÀÚ·á¸¦ ¹®ÀÚ·Î º¯È¯ÇØ ÁÖ´Â º¸Á¶ ½ºÆ®¸²
-BufferedWriter : ¹®ÀÚ·Î ¾µ ¶§ ¹è¿­À» Á¦°øÇÏ¿© ÇÑ²¨¹ø¿¡ ÀĞÀ» ¼ö ÀÖ´Â ±â´ÉÀ» Á¦°øÇÏ´Â º¸Á¶ ½ºÆ®¸²
+FileWriter : íŒŒì¼ì—ì„œ ë¬¸ì ë‹¨ìœ„ë¡œ ì“°ëŠ” ìŠ¤íŠ¸ë¦¼ í´ë˜ìŠ¤
+OutputStreamWriter : ë°”ì´íŠ¸ ë‹¨ìœ„ë¡œ ì“´ ìë£Œë¥¼ ë¬¸ìë¡œ ë³€í™˜í•´ ì£¼ëŠ” ë³´ì¡° ìŠ¤íŠ¸ë¦¼
+BufferedWriter : ë¬¸ìë¡œ ì“¸ ë•Œ ë°°ì—´ì„ ì œê³µí•˜ì—¬ í•œêº¼ë²ˆì— ì½ì„ ìˆ˜ ìˆëŠ” ê¸°ëŠ¥ì„ ì œê³µí•˜ëŠ” ë³´ì¡° ìŠ¤íŠ¸ë¦¼
 */
 public class MakeFileWriter {
 	void charWriter() {
-		try(FileWriter fw = new FileWriter("output.txt");) { //FileWriter »ı¼º. FileWriter(String name), FileWriter(File f)
-			//FileWriter(String name, boolean append) : append°ªÀÌ trueÀÌ¸é ÆÄÀÏ ½ºÆ®¸²À» ´İ°í ´Ù½Ã »ı¼ºÇÒ ¶§ ÆÄÀÏ ³¡¿¡ ÀÌ¾î¼­ ¾´´Ù.
-			fw.write('A');	//void write(int c) : ÇÑ ¹®ÀÚ¸¦ Ãâ·Â
+		try(FileWriter fw = new FileWriter("output.txt");) { //FileWriter ìƒì„±. FileWriter(String name), FileWriter(File f)
+			//FileWriter(String name, boolean append) : appendê°’ì´ trueì´ë©´ íŒŒì¼ ìŠ¤íŠ¸ë¦¼ì„ ë‹«ê³  ë‹¤ì‹œ ìƒì„±í•  ë•Œ íŒŒì¼ ëì— ì´ì–´ì„œ ì“´ë‹¤.
+			fw.write('A');	//void write(int c) : í•œ ë¬¸ìë¥¼ ì¶œë ¥
 			char buf[] = {'B','C','D','E'};
-			fw.write(buf);	//void write(char[] buf) : ¹è¿­ bufÀÇ ³»¿ëÀ» ÆÄÀÏ¿¡ Ãâ·Â
-			fw.write(buf,1,2); //void write(char[] buf, int off, int len) : bufÀÇ ³»¿ëÀ» offÀ§Ä¡ºÎÅÍ len¸¸Å­ Ãâ·Â
+			fw.write(buf);	//void write(char[] buf) : ë°°ì—´ bufì˜ ë‚´ìš©ì„ íŒŒì¼ì— ì¶œë ¥
+			fw.write(buf,1,2); //void write(char[] buf, int off, int len) : bufì˜ ë‚´ìš©ì„ offìœ„ì¹˜ë¶€í„° lenë§Œí¼ ì¶œë ¥
 			fw.write(65);
-			fw.write(" Hello ");//void write(String s) : ¹®ÀÚ¿­ s¸¦ Ãâ·Â
-			fw.write("Wwworld",2,5);//void write(String s, int off, int len) : sÀÇ ³»¿ëÀ» offÀ§Ä¡ºÎÅÍ len¸¸Å­ Ãâ·Â
+			fw.write(" Hello ");//void write(String s) : ë¬¸ìì—´ së¥¼ ì¶œë ¥
+			fw.write("Wwworld",2,5);//void write(String s, int off, int len) : sì˜ ë‚´ìš©ì„ offìœ„ì¹˜ë¶€í„° lenë§Œí¼ ì¶œë ¥
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
