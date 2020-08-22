@@ -99,14 +99,14 @@
 		- 구현
 
 * ## 여러가지 자바 클래스
-	+ ### (9) object 클래스와 메서드
+	+ ### (9) Object 클래스와 메서드
 		- toString(), equals(), hashCode(), clone(), getClass()
-	+ ### (10) string 클래스와 메서드
+	+ ### (10) String 클래스와 메서드
 		- indexOf(), charAt(), equals(), trim(), substring() 
-	+ ### (11) wrapper 클래스
+	+ ### (11) Wrapper 클래스
 		- Integer, String, Double..
 		- Integer.parseInt()
-	+ ### (12) class 클래스
+	+ ### (12) Class 클래스
 		- getClass(), forName(), newInstance(), reflection
 	+ ### (21) 내부 클래스
 		- 인스턴스 내부 클래스
